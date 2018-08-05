@@ -1,0 +1,9 @@
+.page {
+  &__header {
+    padding: 5px 20px;
+    
+    @media #{$m-from-tablet} {
+      padding: 32px 23px;
+    }
+  }
+}

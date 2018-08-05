@@ -1,0 +1,37 @@
+.burger {
+  z-index: 1;
+  cursor: pointer;
+
+  @media #{$m-from-tablet} {
+    display: none;
+  }
+
+  &__line {
+    display: block;
+    width: 16px;
+    height: 3px;
+    background-color: $c-font-text;
+    border-radius: 1px;
+    transition: .1s all;
+
+    &:not(:last-child) {
+      margin-bottom: 3px;
+    }
+  }
+
+  &.close {
+    .burger__line {
+      &:nth-child(1) {
+        transform: translate(0, 5px) rotate(45deg);
+      }
+      
+      &:nth-child(2) {
+        display: none;
+      }
+      
+      &:nth-child(3) {
+        transform: translate(0, -1px) rotate(-45deg);
+      }
+    }
+  }
+}

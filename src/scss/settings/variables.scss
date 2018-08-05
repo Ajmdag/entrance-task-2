@@ -1,0 +1,19 @@
+/* Media quiries */
+$m-from-tablet: screen and (min-width: 768px);
+$m-to-tablet: screen and (max-width: 768px);
+
+/* Fonts */
+$f-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+/* Colors  */
+$c-font-date: #858585;
+$c-font-inactive: #858585;
+$c-arrow-disable: #c2c2c2;
+$c-arrow-enable: #333;
+$c-font-location-device: #858585;
+$c-font-text: #333;
+$c-hr-line: #f0f0f0;
+
+/* Simple colors */
+$background-white: #fff;
+$white: #fff;

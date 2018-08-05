@@ -12,10 +12,10 @@ const browserSync = require('browser-sync').create();
 
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
 
-// Компиляция sass
+// Компиляция scss
 gulp.task('styles', () => {
   return gulp
-    .src('./src/sass/main.sass')
+    .src('./src/scss/main.scss')
     .pipe(gulpIf(isDevelopment, sourcemaps.init()))
     .pipe(sass())
     .pipe(autoprefixer())
@@ -27,7 +27,7 @@ gulp.task('styles', () => {
 // Копирование файлов из папки assets
 gulp.task('assets', () => {
   return gulp.src('./src/assets/**/**')
-    .pipe(gulp.dest('./dist', { prefix: 2 }));
+    .pipe(gulp.dest('./dist/assets'));
 });
 
 // Компилияция pug
@@ -53,8 +53,8 @@ gulp.task('scripts', () => {
 
 // Слежка => перекомпиляция и копирование при изменении
 gulp.task('watch', () => {
-  gulp.watch('./src/sass/**/**', gulp.series('styles'));
-  gulp.watch('./src/pug/**/**', gulp.series('pug'));
+  gulp.watch('./src/scss/**/**', gulp.series('styles'));
+  gulp.watch('./src/pug/index.pug', gulp.series('pug'));
   gulp.watch('./src/assets/**/**', gulp.series('assets'));
   gulp.watch('./src/js/**/**', gulp.series('scripts'));
 });

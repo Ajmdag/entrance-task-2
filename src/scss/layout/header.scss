@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  &__logo {
+    @media #{$m-from-tablet} {
+      margin-right: 50px;
+    }
+  }
+}

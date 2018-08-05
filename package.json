@@ -17,6 +17,9 @@
     "url": "https://github.com/Ajmdag/entrance-task-2/issues"
   },
   "homepage": "https://github.com/Ajmdag/entrance-task-2#readme",
+  "dependencies": {
+    "normalize-scss": "^7.0.1"
+  },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
