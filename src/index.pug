@@ -7,22 +7,26 @@ html(lang="en")
     link(rel="stylesheet", href="styles/main.css")
     title Яндекс.Музыка
   body.page
-  header.page__header.header
-    a.header__logo(href="#")
-      img(src="./assets/Яндекс дом.svg", alt="")
 
-    nav.header__nav.nav
-      ul.nav__list
-        li.nav__item
-          a.nav__link.active(href="#") Сводка
-        li.nav__item
-          a.nav__link(href="#") Устройства
-        li.nav__item
-          a.nav__link(href="#") Сценарии
+    header.page__header.header
+      a.header__logo(href="#")
+        img(src="./assets/Яндекс дом.svg", alt="")
 
-    .header__burger.burger
-        span.burger__line
-        span.burger__line
-        span.burger__line
+      nav.header__nav.nav
+        ul.nav__list
+          li.nav__item
+            a.nav__link.active(href="#") Сводка
+          li.nav__item
+            a.nav__link(href="#") Устройства
+          li.nav__item
+            a.nav__link(href="#") Сценарии
+
+      .header__burger.burger
+          span.burger__line
+          span.burger__line
+          span.burger__line
+
+
+    hr.horizontal-line
 
     script(src="./js/main.js")

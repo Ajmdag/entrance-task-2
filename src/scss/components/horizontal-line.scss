@@ -1,0 +1,7 @@
+.horizontal-line {
+  @media #{$m-from-tablet} {
+    height: 1px;
+    width: 100%;
+    background-color: $c-hr-line;
+  }
+}

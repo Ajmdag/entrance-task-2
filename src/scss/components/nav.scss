@@ -7,23 +7,20 @@
   background-color: $background-white;
   transform: translateY(-100%);
 
-  @media #{$m-to-tablet} {
+  @media #{$m-to-horizontal-phone} {
     padding: 30px 20px;
   }
 
-  @media #{$m-from-tablet} {
+  @media #{$m-from-horizontal-phone} {
     position: static;
     transform: none;
   }
 
   &__list {
-    padding: 0;
     width: 100%;
-    // padding-right: 50px;
 
-    @media (max-width: 400px) {
+    @media #{$m-from-horizontal-phone} {
       margin: 0 auto;
-      margin-top: 15px;
     }
   }
   
@@ -33,13 +30,13 @@
     &:not(:last-child) {
       margin-right: 25px;
       
-      @media (max-width: 400px) {
+      @media #{$m-to-horizontal-phone} {
         margin-right: 0;
         margin-bottom: 15px;
       }
     }
 
-    @media (max-width: 400px) {
+    @media #{$m-to-horizontal-phone} {
       display: block;
       text-align: center;
       margin-right: 0;

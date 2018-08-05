@@ -1,6 +1,12 @@
 /* Media quiries */
+$m-from-laptop: screen and (min-width: 1366px);
+$m-to-laptop: screen and (max-width: 1366px);
 $m-from-tablet: screen and (min-width: 768px);
 $m-to-tablet: screen and (max-width: 768px);
+$m-from-horizontal-phone: screen and (min-width: 550px);
+$m-to-horizontal-phone: screen and (max-width: 550px);
+$m-from-mobile: screen and (min-width: 320px);
+$m-to-mobile: screen and (max-width: 320px);
 
 /* Fonts */
 $f-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
