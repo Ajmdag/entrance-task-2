@@ -12,14 +12,18 @@ $m-to-mobile: screen and (max-width: 320px);
 $f-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
 /* Colors  */
-$c-font-date: #858585;
+$c-font-status: #858585;
 $c-font-inactive: #858585;
 $c-arrow-disable: #c2c2c2;
 $c-arrow-enable: #333;
 $c-font-location-device: #858585;
 $c-font-text: #333;
 $c-hr-line: #f0f0f0;
+$c-background-panel: #f0f0f0;
+$c-devices-menu-item: #f7f7f7;
+$c-devices-menu-item-yellow: #ffd93e;
 
 /* Simple colors */
-$background-white: #fff;
 $white: #fff;
+$background-white: #fff;
+$black: #000;

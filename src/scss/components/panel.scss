@@ -1,0 +1,27 @@
+.panel {
+
+  &__list {
+    overflow: auto;
+    display: flex;
+  }
+  
+  &__item {
+    flex-shrink: 0;
+    width: 200px;
+    height: 120px;
+    background-color: $c-background-panel;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__text {
+    margin-top: auto;
+  }
+}

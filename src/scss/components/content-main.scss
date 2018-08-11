@@ -1,0 +1,69 @@
+.content-main {
+  @media #{$m-to-laptop} {
+    margin-bottom: 31px;
+  }
+
+  &__header {
+    display: none;
+    
+    @media #{$m-from-laptop} {
+      display: block;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__block {
+    min-height: 282px;
+    max-width: 100%;
+    border-radius: 20px;
+    padding: 20px;
+    padding-right: 0;
+    position: relative;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 20px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+  }
+
+  &__hello {
+    margin-bottom: 5px;
+  }
+
+  &__status {
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+
+  &__weather {
+    display: flex;
+  }
+
+  &__weather-block {
+    margin-right: 20px;
+  }
+
+  &__weather-place {
+    margin-bottom: 5px;
+  }
+
+  &__temperature-block {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__weather-temperature {
+    margin-right: 5px;
+  }
+}

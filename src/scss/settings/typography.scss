@@ -2,4 +2,21 @@ body {
   font-family: Arial, $f-sans-serif;
   color: $c-font-text;
   font-weight: 700;
+  line-height: 1.15;
+  font-size: 16px;
+}
+
+p.title {
+  font-size: 18px;
+  line-height: 1.16;
+}
+
+p.status {
+  color: $c-font-status;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+span.temperature {
+  font-size: 24px;
 }

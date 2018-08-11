@@ -10,6 +10,10 @@
     }
   }
 
+  &__nav.show {
+    z-index: 1;
+  }
+
   &__underline {
     height: 1px;
     width: 100%;

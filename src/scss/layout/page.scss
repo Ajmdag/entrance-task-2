@@ -6,4 +6,18 @@
       padding: 26px 40px;
     }
   }
+
+  &__content {
+    padding: 0 20px;
+    margin: 0 auto;
+
+    @media #{$m-from-tablet} {
+      padding: 50px 40px;
+    }
+
+    @media #{$m-from-laptop} {
+      max-width: 1285px;
+      margin: 0 auto;
+    }
+  }
 }
