@@ -1,3 +1,22 @@
 .content {
-  
+  &__row {
+
+    @media #{$m-from-laptop} {
+      display: flex;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__main {
+    @media #{$m-from-laptop} {
+      width: 50%;
+      margin-right: 25px;
+    }
+  }
+
+  &__scripts {
+    @media #{$m-from-laptop} {
+      width: 50%;
+    }
+  }
 }

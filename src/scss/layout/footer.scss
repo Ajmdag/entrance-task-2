@@ -2,11 +2,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 12px;
+  padding: 12px 20px;
   flex-wrap: wrap;
+  width: 100%;
 
   @media #{$m-from-mobile} {
     flex-wrap: nowrap;
+  }
+
+  @media #{$m-from-laptop} {
+    padding-bottom: 27px;
+    max-width: 1450px;
+    margin: 0 auto;
   }
 
   &__list {

@@ -1,7 +1,49 @@
 .content-scripts {
   margin-bottom: 25px;
 
+  @media #{$m-from-laptop} {
+    margin-bottom: 0;
+  }
+
   &__header {
-    margin-bottom: 20px;
+    margin-bottom: 14px;
+
+    @media #{$m-from-laptop} {
+      display: flex;
+    }
+  }
+
+  &__arrows {
+    display: flex;
+  }
+
+  &__arrow {
+
+    &--right {
+      transform: rotate(180deg);
+    }
+  }
+
+  .panel {
+    &__list {
+      margin-left: -6px;
+    }
+  }
+
+  @media #{$m-from-laptop} {
+    .panel {
+      &__list {
+        flex-wrap: wrap;
+      }
+
+      &__item {
+        margin-bottom: 15px;
+        height: 100px;
+
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
+    }
   }
 }

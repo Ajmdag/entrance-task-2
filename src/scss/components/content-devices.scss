@@ -4,6 +4,16 @@
     justify-content: space-between;
     position: relative;
     margin-bottom: 17px;
+
+    @media #{$m-from-laptop} {
+      justify-content: flex-start;
+    }
+  }
+
+  &__title {
+    @media #{$m-from-laptop} {
+      margin-right: 13px;
+    }
   }
 
   &__menu-list {
@@ -14,9 +24,13 @@
     top: 0;
     right: 0;
 
-    &.open {
-      visibility: visible;
+    @media #{$m-from-laptop} {
+      flex-direction: row;
+      position: static;
+      transform: none;
+    }
 
+    &.open {
       .content-devices__menu-list-item {
         @for $i from 1 through 4 {
           &:nth-child(#{$i}) {
@@ -24,6 +38,10 @@
             animation-duration: 750ms - 150 * $i;
             animation-timing-function: ease-in-out;
             animation-fill-mode: forwards;
+            
+            @media #{$m-from-laptop} {
+              animation: none;
+            }
           }
         }
       }
@@ -46,23 +64,71 @@
     backface-visibility: hidden;
     transform: rotateX(90deg);
 
-    &.all {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    &.picked {
       background-color: $c-devices-menu-item-yellow;
-      opacity: 1;
-      visibility: visible;
-      width: 70px;
+    }
+
+    @media #{$m-from-laptop} {
       transform: none;
+      margin-right: 10px;
+    }
+  }
 
-      span {
-        margin-right: 5px;
-      }
+  &__menu-list-item-all {
+    border-radius: 20px;
+    background-color: $c-devices-menu-item;
+    color: $black;
+    font-size: 13px;
+    padding: 7px 16px;
+    cursor: pointer;
+    text-align: center;
+    transition: .2s all;
+    backface-visibility: hidden;
+    transform: rotateX(90deg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $c-devices-menu-item;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
 
-      img {
-        transform: rotate(180deg);
+    @media #{$m-from-laptop} {
+      transform: none;
+      margin-right: 10px;
+    }
+
+    &.picked {
+      background-color: $c-devices-menu-item-yellow;
+    }
+
+    span {
+      margin-right: 5px;
+
+      @media #{$m-from-laptop} {
+        margin-right: 0;
       }
+    }
+
+    img {
+      transform: rotate(180deg);
+
+      @media #{$m-from-laptop} {
+        @include visually-hidden;
+      }
+    }
+  }
+
+  .panel__list {
+    margin-left: -6px;
+    @media #{$m-from-laptop} {
+      overflow: visible;
+    }
+  }
+
+  .panel__item {
+    &.display-none {
+      display: none;
     }
   }
 }

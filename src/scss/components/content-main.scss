@@ -1,6 +1,8 @@
 .content-main {
-  @media #{$m-to-laptop} {
-    margin-bottom: 31px;
+  margin-bottom: 31px;
+
+  @media #{$m-from-laptop} {
+    margin-bottom: 0;
   }
 
   &__header {
@@ -8,7 +10,7 @@
     
     @media #{$m-from-laptop} {
       display: block;
-      margin-bottom: 32px;
+      margin-bottom: 20px;
     }
   }
 
@@ -19,6 +21,31 @@
     padding: 20px;
     padding-right: 0;
     position: relative;
+
+    @media #{$m-from-laptop} {
+      max-height: 330px;
+      display: flex;
+      justify-content: space-between;
+      padding: 25px 20px 0 25px;
+    }
+  }
+
+  &__scroll-button {
+    display: none;
+
+    @media #{$m-from-laptop} {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: 0;
+      right: 26px;
+      cursor: pointer;
+      width: 200px;
+      height: 40px;
+      background-color: $c-background-panel;
+      border-radius: 20px 20px 0 0;
+    }
   }
 
   &__image {
@@ -65,5 +92,25 @@
 
   &__weather-temperature {
     margin-right: 5px;
+  }
+
+  .panel {
+    @media #{$m-from-laptop} {
+      &__list {
+        display: flex;
+        flex-direction: column;
+        max-height: 100%;
+        margin-top: -6px;
+      }
+  
+      &__item {
+        margin-bottom: 30px;
+
+        &:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 15px;
+        }
+      }
+    }
   }
 }

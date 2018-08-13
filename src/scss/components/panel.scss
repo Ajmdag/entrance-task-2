@@ -1,8 +1,10 @@
 .panel {
-
   &__list {
     overflow: auto;
+    padding: 6px;
     display: flex;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar { width: 0; }
   }
   
   &__item {
@@ -15,6 +17,12 @@
     padding: 15px;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $background-white;
+      box-shadow: 0 2px 6px  0 rgba(197, 186, 186, .5);
+    }
 
     &:not(:last-child) {
       margin-right: 20px;

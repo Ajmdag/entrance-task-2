@@ -9,167 +9,237 @@ html(lang="en")
     title Яндекс.Дом
   body.page
 
-    header.page__header.header
-      a.header__logo(href="#")
-        img(src="./assets/Яндекс дом.svg", alt="")
+    .main
 
-      nav.header__nav.nav
-        ul.nav__list
-          li.nav__item
-            a.nav__link.active(href="#") Сводка
-          li.nav__item
-            a.nav__link(href="#") Устройства
-          li.nav__item
-            a.nav__link(href="#") Сценарии
+      header.page__header.header
+        a.header__logo(href="#")
+          img(src="./assets/Яндекс дом.svg", alt="")
 
-      .header__burger.burger
-          span.burger__line
-          span.burger__line
-          span.burger__line
+        nav.header__nav.nav
+          ul.nav__list
+            li.nav__item
+              a.nav__link.active(href="#") Сводка
+            li.nav__item
+              a.nav__link(href="#") Устройства
+            li.nav__item
+              a.nav__link(href="#") Сценарии
+
+        .header__burger.burger
+            span.burger__line
+            span.burger__line
+            span.burger__line
 
 
-    hr.horizontal-line
+      hr.horizontal-line
 
-    main
-      section.page__content.content
-        .content__main
-          .content-main
-            .content-main__header
-              p.title.content-main__title Главное
-            .content-main__body
-              .content-main__block
-                img.content-main__image(src="./assets/bg@1x.png")
-                .content-main__text
-                  p.title.content-main__hello Привет, Геннадий?
-                  p.content-main__status Двери и окна закрыты, сигнализация включена.
-                  .content-main__weather
-                    .content-main__weather-block
-                      p.status.content-main__weather-place Дома
-                      .content-main__temperature-block
-                        span.temperature.status.content-main__weather-temperature +23
-                    .content-main__weather-block
-                      p.status.content-main__weather-place За окном
-                      .content-main__temperature-block
-                        span.temperature.status.content-main__weather-temperature +19
-                        img.content-main__weather-image(src="./assets/cloud-drizzle.svg")
+      main
+        section.page__content.content
+          .content__row
+            .content__main
+              .content-main
+                .content-main__header
+                  p.title.content-main__title Главное
+                .content-main__body
+                  .content-main__block
+                    .content-main__scroll-button
+                      img(src="./assets/icons/Arrow Double/M.svg")
+                    img.content-main__image(src="./assets/bg@1x.png")
+                    .content-main__text
+                      p.title.content-main__hello Привет, Геннадий!
+                      p.content-main__status Двери и окна закрыты, сигнализация включена.
+                      .content-main__weather
+                        .content-main__weather-block
+                          p.status.content-main__weather-place Дома
+                          .content-main__temperature-block
+                            span.temperature.status.content-main__weather-temperature +23
+                        .content-main__weather-block
+                          p.status.content-main__weather-place За окном
+                          .content-main__temperature-block
+                            span.temperature.status.content-main__weather-temperature +19
+                            img.content-main__weather-image(src="./assets/cloud-drizzle.svg")
 
-                .panel.content-main__panel-list
+                    .panel
+                      .panel__list
+                        .panel__item
+                          .panel__image-container
+                            img.panel__image(src="./assets/icon_sun.svg")
+                          .panel__text
+                            p.panel__name Philips Cooler
+                            p.panel__time.status Начнет охлаждать в 16:30
+                        .panel__item
+                          .panel__image-container
+                            img.panel__image(src="./assets/icon_sun.svg")
+                          .panel__text
+                            p.panel__name Philips Cooler
+                            p.panel__time.status Начнет охлаждать в 16:30
+                        .panel__item
+                          .panel__image-container
+                            img.panel__image(src="./assets/icon_sun.svg")
+                          .panel__text
+                            p.panel__name Philips Cooler
+                            p.panel__time.status Начнет охлаждать в 16:30
+                        .panel__item
+                          .panel__image-container
+                            img.panel__image(src="./assets/icon_sun.svg")
+                          .panel__text
+                            p.panel__name Philips Cooler
+                            p.panel__time.status Начнет охлаждать в 16:30
+                        .panel__item
+                          .panel__image-container
+                            img.panel__image(src="./assets/icon_sun.svg")
+                          .panel__text
+                            p.panel__name Philips Cooler
+                            p.panel__time.status Начнет охлаждать в 16:30
+
+            .content__scripts
+              .content-scripts
+                .content-scripts__header
+                  p.title.content-scripts__title Избранные сценарии
+                  .content-scripts__arrows
+                    .content-scripts__arrow.content-scripts__arrow--left
+                      img(src="./assets/Icons/arrow-left.svg")
+                    .content-scripts__arrow.content-scripts__arrow--right
+                      img(src="./assets/Icons/arrow-left.svg")
+                .content-scripts__body
+                  .panel.content-scripts__panel-list
+                      .panel__list
+                        .panel__item
+                          .panel__image-container
+                            img.panel__image(src="./assets/icon_sun.svg")
+                          .panel__text
+                            p.panel__name Philips Cooler
+                            p.panel__time.status Начнет охлаждать в 16:30
+                        .panel__item
+                          .panel__image-container
+                            img.panel__image(src="./assets/icon_sun.svg")
+                          .panel__text
+                            p.panel__name Philips Cooler
+                            p.panel__time.status Начнет охлаждать в 16:30
+                        .panel__item
+                          .panel__image-container
+                            img.panel__image(src="./assets/icon_sun.svg")
+                          .panel__text
+                            p.panel__name Philips Cooler
+                            p.panel__time.status Начнет охлаждать в 16:30
+                        .panel__item
+                          .panel__image-container
+                            img.panel__image(src="./assets/icon_sun.svg")
+                          .panel__text
+                            p.panel__name Philips Cooler
+                            p.panel__time.status Начнет охлаждать в 16:30
+                        .panel__item
+                          .panel__image-container
+                            img.panel__image(src="./assets/icon_sun.svg")
+                          .panel__text
+                            p.panel__name Philips Cooler
+                            p.panel__time.status Начнет охлаждать в 16:30
+                        .panel__item
+                          .panel__image-container
+                            img.panel__image(src="./assets/icon_sun.svg")
+                          .panel__text
+                            p.panel__name Philips Cooler
+                            p.panel__time.status Начнет охлаждать в 16:30
+                        .panel__item
+                          .panel__image-container
+                            img.panel__image(src="./assets/icon_sun.svg")
+                          .panel__text
+                            p.panel__name Philips Cooler
+                            p.panel__time.status Начнет охлаждать в 16:30
+                        .panel__item
+                          .panel__image-container
+                            img.panel__image(src="./assets/icon_sun.svg")
+                          .panel__text
+                            p.panel__name Philips Cooler
+                            p.panel__time.status Начнет охлаждать в 16:30
+                        .panel__item
+                          .panel__image-container
+                            img.panel__image(src="./assets/icon_sun.svg")
+                          .panel__text
+                            p.panel__name Philips Cooler
+                            p.panel__time.status Начнет охлаждать в 16:30
+
+          .content__devices
+            .content-devices
+              .content-devices__header
+                p.title.content-devices__title Избранные&nbsp;устройства
+                .content-devices__menu-list-item-all.picked
+                    span Все
+                    img(src="./assets/icons/arrow-down.svg")
+                .content-devices__menu-list
+                  .content-devices__menu-list-item(data-filter="kitchen") Кухня
+                  .content-devices__menu-list-item(data-filter="hall") Зал
+                  .content-devices__menu-list-item(data-filter="lamp") Лампочки
+                  .content-devices__menu-list-item(data-filter="camera") Камеры
+
+              .content-devices__body
+                .panel.content-devices__panel-list
                   .panel__list
-                    .panel__item
+                    .panel__item(data-filter="kitchen lamp")
                       .panel__image-container
                         img.panel__image(src="./assets/icon_sun.svg")
                       .panel__text
-                        p.panel__name Philips Cooler
+                        p.panel__name kitchen lamp
                         p.panel__time.status Начнет охлаждать в 16:30
-                    .panel__item
+                    .panel__item(data-filter="hall")
                       .panel__image-container
                         img.panel__image(src="./assets/icon_sun.svg")
                       .panel__text
-                        p.panel__name Philips Cooler
+                        p.panel__name hall
                         p.panel__time.status Начнет охлаждать в 16:30
-                    .panel__item
+                    .panel__item(data-filter="kitchen")
                       .panel__image-container
                         img.panel__image(src="./assets/icon_sun.svg")
                       .panel__text
-                        p.panel__name Philips Cooler
+                        p.panel__name kitchen
                         p.panel__time.status Начнет охлаждать в 16:30
-                    .panel__item
+                    .panel__item(data-filter="lamp")
                       .panel__image-container
                         img.panel__image(src="./assets/icon_sun.svg")
                       .panel__text
-                        p.panel__name Philips Cooler
+                        p.panel__name lamp
                         p.panel__time.status Начнет охлаждать в 16:30
-                    .panel__item
+                    .panel__item(data-filter="kitchen")
                       .panel__image-container
                         img.panel__image(src="./assets/icon_sun.svg")
                       .panel__text
-                        p.panel__name Philips Cooler
+                        p.panel__name kitchen
                         p.panel__time.status Начнет охлаждать в 16:30
-
-        .content__scripts
-          .content-scripts
-            .content-scripts__header
-              p.title.content-scripts__title Избранные сценарии
-            .content-scripts__body
-              .panel.content-scripts__panel-list
-                  .panel__list
-                    .panel__item
+                    .panel__item(data-filter="lamp")
                       .panel__image-container
                         img.panel__image(src="./assets/icon_sun.svg")
                       .panel__text
-                        p.panel__name Philips Cooler
+                        p.panel__name lamp
                         p.panel__time.status Начнет охлаждать в 16:30
-                    .panel__item
+                    .panel__item(data-filter="kitchen")
                       .panel__image-container
                         img.panel__image(src="./assets/icon_sun.svg")
                       .panel__text
-                        p.panel__name Philips Cooler
+                        p.panel__name kitchen
                         p.panel__time.status Начнет охлаждать в 16:30
-                    .panel__item
+                    .panel__item(data-filter="camera")
                       .panel__image-container
                         img.panel__image(src="./assets/icon_sun.svg")
                       .panel__text
-                        p.panel__name Philips Cooler
+                        p.panel__name camera
                         p.panel__time.status Начнет охлаждать в 16:30
-                    .panel__item
+                    .panel__item(data-filter="lamp")
                       .panel__image-container
                         img.panel__image(src="./assets/icon_sun.svg")
                       .panel__text
-                        p.panel__name Philips Cooler
+                        p.panel__name lamp
                         p.panel__time.status Начнет охлаждать в 16:30
-                    .panel__item
+                    .panel__item(data-filter="lamp")
                       .panel__image-container
                         img.panel__image(src="./assets/icon_sun.svg")
                       .panel__text
-                        p.panel__name Philips Cooler
+                        p.panel__name lamp
                         p.panel__time.status Начнет охлаждать в 16:30
-
-        .content__devices
-          .content-devices
-            .content-devices__header
-              p.title.content-devices__title Избранные&nbsp;устройства
-              .content-devices__menu-list-item.all
-                  span Все
-                  img(src="./assets/icons/arrow-down.svg")
-              .content-devices__menu-list
-                .content-devices__menu-list-item Кухня
-                .content-devices__menu-list-item Зал
-                .content-devices__menu-list-item Лампочки
-                .content-devices__menu-list-item Камеры
-
-            .content-devices__body
-              .panel.content-devices__panel-list
-                .panel__list
-                  .panel__item
-                    .panel__image-container
-                      img.panel__image(src="./assets/icon_sun.svg")
-                    .panel__text
-                      p.panel__name Philips Cooler
-                      p.panel__time.status Начнет охлаждать в 16:30
-                  .panel__item
-                    .panel__image-container
-                      img.panel__image(src="./assets/icon_sun.svg")
-                    .panel__text
-                      p.panel__name Philips Cooler
-                      p.panel__time.status Начнет охлаждать в 16:30
-                  .panel__item
-                    .panel__image-container
-                      img.panel__image(src="./assets/icon_sun.svg")
-                    .panel__text
-                      p.panel__name Philips Cooler
-                      p.panel__time.status Начнет охлаждать в 16:30
-                  .panel__item
-                    .panel__image-container
-                      img.panel__image(src="./assets/icon_sun.svg")
-                    .panel__text
-                      p.panel__name Philips Cooler
-                      p.panel__time.status Начнет охлаждать в 16:30
-                  .panel__item
-                    .panel__image-container
-                      img.panel__image(src="./assets/icon_sun.svg")
-                    .panel__text
-                      p.panel__name Philips Cooler
-                      p.panel__time.status Начнет охлаждать в 16:30
+                    .panel__item(data-filter="kitchen")
+                      .panel__image-container
+                        img.panel__image(src="./assets/icon_sun.svg")
+                      .panel__text
+                        p.panel__name kitchen
+                        p.panel__time.status Начнет охлаждать в 16:30
 
     footer.footer
       ul.footer__list
