@@ -1,7 +1,10 @@
 .page {
+  display: flex;
+  flex-direction: column;
+
+  @media #{$m-from-laptop} {
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
+  }
 
   &__header {
     padding: 12px 20px;
