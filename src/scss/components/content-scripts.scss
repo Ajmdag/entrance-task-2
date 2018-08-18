@@ -10,17 +10,54 @@
 
     @media #{$m-from-laptop} {
       display: flex;
+      justify-content: space-between;
     }
   }
 
   &__arrows {
-    display: flex;
+    display: none;
+
+    @media #{$m-from-laptop} {
+      display: flex;
+      align-items: flex-end;
+      margin-right: 6px;
+    }
   }
 
   &__arrow {
+    cursor: pointer;
+    display: none;
+
+    &.show {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
 
     &--right {
       transform: rotate(180deg);
+      margin-left: 23px;
+    }
+  }
+
+  &__body {
+
+  }
+
+  &__panels-container {
+    @media #{$m-from-laptop} {
+      display: flex;
+    }
+  }
+
+  &__panel-list {
+    @media #{$m-from-laptop} {
+      width: 646px;
+      flex-shrink: 0;
+
+      &:not(:first-child) {
+        // display: none;
+      }
     }
   }
 
@@ -39,6 +76,7 @@
       &__item {
         margin-bottom: 15px;
         height: 100px;
+        flex-shrink: 0;
 
         &:nth-child(3n) {
           margin-right: 0;
