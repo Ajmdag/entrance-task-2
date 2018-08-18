@@ -40,10 +40,6 @@
     }
   }
 
-  &__body {
-
-  }
-
   &__panels-container {
     @media #{$m-from-laptop} {
       display: flex;
