@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Ajmdag/entrance-task-2#readme",
   "dependencies": {
+    "gulp": "^4.0.0",
     "normalize-scss": "^7.0.1"
   },
   "devDependencies": {
@@ -25,7 +26,6 @@
     "babel-preset-env": "^1.7.0",
     "browser-sync": "^2.24.6",
     "del": "^3.0.0",
-    "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-babel": "^7.0.1",
     "gulp-browserify": "^0.5.1",
