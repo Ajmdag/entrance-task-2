@@ -40,16 +40,24 @@
     }
   }
 
-  &__panels-container {
+  &__body {
+    overflow: hidden;
     @media #{$m-from-laptop} {
-      display: flex;
+      width: 646px;
+    }
+  }
+
+  &__panels-container {
+    display: flex;
+    transition: .35s all;
+    width: 9999px;
+    @media #{$m-from-laptop} {
     }
   }
 
   &__panel-list {
     @media #{$m-from-laptop} {
       width: 646px;
-      flex-shrink: 0;
 
       &:not(:first-child) {
         // display: none;
