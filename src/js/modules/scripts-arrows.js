@@ -14,9 +14,10 @@ if (panelLists.length > 1) { // Если больше одного слайда
 
   let position = 0;
   let activeList;
-  let panelListWidth = panelLists[0].offsetWidth;
+  let panelListWidth;
 
   leftArrow.addEventListener('click', () => {
+    panelListWidth = panelLists[0].offsetWidth;
     activeList = document.querySelector('.content-scripts__panel-list.active');
     if (activeList.previousElementSibling) {
       position += panelListWidth;
@@ -27,6 +28,7 @@ if (panelLists.length > 1) { // Если больше одного слайда
   });
   
   rightArrow.addEventListener('click', () => {
+    panelListWidth = panelLists[0].offsetWidth;
     activeList = document.querySelector('.content-scripts__panel-list.active');
     if (activeList.nextElementSibling) {
       position += -panelListWidth;
