@@ -41,8 +41,8 @@
   }
 
   &__body {
-    overflow: hidden;
     @media #{$m-from-laptop} {
+      overflow: hidden;
       width: 646px;
     }
   }
@@ -50,8 +50,13 @@
   &__panels-container {
     display: flex;
     transition: .35s all;
-    width: 9999px;
+    overflow: auto;
+
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar { width: 0; }
+
     @media #{$m-from-laptop} {
+      width: 9999px;
     }
   }
 
