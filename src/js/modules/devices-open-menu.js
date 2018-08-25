@@ -12,7 +12,5 @@ document.addEventListener('click', event => {
     && !event.target.classList.contains('content-devices__menu-list-item-all')
     && !event.target.parentNode.classList.contains('content-devices__menu-list-item-all')) {
       menuList.classList.remove('open');
-      console.log('somehitns')
-      console.log(event.target)
   }
 });
