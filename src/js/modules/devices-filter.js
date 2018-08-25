@@ -1,20 +1,20 @@
-const devices = document.querySelectorAll('.content-devices .panel__item');
 const menuItems = document.querySelectorAll('.content-devices__menu-list-item');
+const menuAll = document.querySelector('.content-devices__menu-list-item-all');
+const checkboxes = document.querySelectorAll('.content-devices__checkbox');
 
-menuItems.forEach((item, id) => {
+menuItems.forEach(item => {
   item.addEventListener('click', () => {
+    menuAll.classList.remove('picked');
     item.classList.toggle('picked');
-    const filterValue = item.getAttribute('data-filter');
+  });
+});
 
-    devices.forEach(device => {
-      if (device.getAttribute('data-filter').split(' ').every(item => {
-        return item !== filterValue;
-      })) {
-        device.classList.add('display-none');
-      } else {
-        device.classList.remove('display-none');
-      }
-    });
-
+menuAll.addEventListener('click', () => {
+  menuAll.classList.add('picked');
+  checkboxes.forEach(item => {
+    item.checked = false;
+  });
+  menuItems.forEach(item => {
+    item.classList.remove('picked');
   });
 });

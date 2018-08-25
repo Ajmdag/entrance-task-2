@@ -1,0 +1,218 @@
+.popup {
+  position: absolute;
+  height: 120px;
+  width: 200px;
+  transition: .5s all;
+  z-index: 1;
+  overflow: hidden;
+  margin: 20px;
+  display: block;
+
+  &.show {
+    display: block;
+    position: fixed;
+    width: calc(100vw - 40px);
+    height: calc(100vh - 40px);
+
+    .popup__content {
+      height: 490px;
+    }
+
+    &.visible {
+      .popup__header {
+        opacity: 1;
+      }
+  
+      .popup__choice {
+        opacity: 1;
+      }
+  
+      [class^="popup__content--"] {
+        opacity: 1;
+      }
+  
+      .popup__accept {
+        opacity: 1;
+      }
+  
+      .popup__close {
+        opacity: 1;
+      }
+    }
+  }
+
+  &.hide {
+    display: none;
+  }
+
+  &__content {
+    border-radius: 20px;
+    background-color: $background-white;
+    margin-bottom: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    &--floor {
+      background: url(../assets/background.svg) center, url(../assets/OvalCopy.png) 88% 67%, url(../assets/Oval.png) center;
+      background-repeat: no-repeat;
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 66px;
+      width: 264px;
+      margin: 0 auto;
+      opacity: 0;
+      transition: 1.5s all;
+    }
+
+    &--temp {
+      margin: 0 auto;
+      flex-grow: 1;
+      width: 60px;
+      height: 100%;
+      background-image: linear-gradient(to bottom, #F76B1C, #FFD800, #068FFF);
+      border-radius: 35px;
+      position: relative;
+      opacity: 0;
+      transition: 1.5s all;
+
+      &:before {
+        position: absolute;
+        top: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        content: '+30';
+        color: $white;
+        display: block;
+        font-size: 18px;
+      }
+
+      &:after {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        content: '-10';
+        color: $white;
+        display: block;
+        font-size: 18px;
+      }
+    }
+    
+    &--light {
+      margin: 0 auto;
+      flex-grow: 1;
+      width: 60px;
+      height: 100%;
+      background-image: linear-gradient(to bottom, #FFB100, #FFE88C);
+      border-radius: 35px;
+      position: relative;
+      opacity: 0;
+      transition: 1.5s all;
+
+      &:before {
+        position: absolute;
+        top: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        content: url('../assets/icon_sun_max.svg');
+        color: $white;
+        display: block;
+        font-size: 18px;
+      }
+
+      &:after {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        content: url('../assets/icon_sun_min.svg');
+        color: $white;
+        display: block;
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__lever {
+    width: 70px;
+    height: 70px;
+    border: 4px solid #fff;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 3px #e8ad00;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  &__header {
+    color: $c-font-text;
+    transition: 1.5s all;
+    margin-bottom: 15px;
+    opacity: 0;
+  }
+
+  &__name {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  &__status {
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  &__choice {
+    transition: 1.5s all;
+    margin-bottom: 25px;
+    display: flex;
+    opacity: 0;
+  }
+
+  &__choice-item {
+    display: block;
+    border-radius: 20px;
+    padding: 7px 14px 15px;
+    font-size: 13px;
+    color: $black;
+    margin-right: 10px;
+    background-color: $c-choice-item;
+    cursor: pointer;
+
+    &.active {
+      background-color: $background-yellow;
+    }
+  }
+
+  &__accept {
+    margin-bottom: 15px;
+    padding: 20px 0;
+    width: 100%;
+    background-color: $background-yellow;
+    display: block;
+    text-align: center;
+    border-radius: 20px;
+    transition: 1.5s all;
+    cursor: pointer;
+    opacity: 0;
+  }
+
+  &__close {
+    margin-bottom: 15px;
+    padding: 20px 0;
+    background-color: $background-white;
+    width: 100%;
+    display: block;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 1.5s all;
+    opacity: 0;
+  }
+}

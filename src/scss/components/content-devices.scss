@@ -126,6 +126,26 @@
     }
   }
 
+  &__checkbox {
+    @include visually-hidden;
+
+    &.kitchen:checked ~ :not([data-filter*="kitchen"]) {
+      display: none;
+    }
+
+    &.hall:checked ~ :not([data-filter*="hall"]) {
+      display: none;
+    }
+
+    &.lamp:checked ~ :not([data-filter*="lamp"]) {
+      display: none;
+    }
+
+    &.camera:checked ~ :not([data-filter*="camera"]) {
+      display: none;
+    }
+  }
+
   .panel__item {
     &.display-none {
       display: none;
