@@ -230,4 +230,3 @@ devices.forEach(item => {
 
   })
 });
-
