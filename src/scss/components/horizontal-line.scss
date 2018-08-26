@@ -1,6 +1,9 @@
 .horizontal-line {
-  @media #{$m-from-tablet} {
+  display: none;
+
+  @media #{$m-from-laptop} {
     height: 1px;
+    display: block;
     width: 100%;
     background-color: $c-hr-line;
   }
