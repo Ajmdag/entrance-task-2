@@ -256,6 +256,9 @@
     display: flex;
     opacity: 0;
     overflow-x: scroll;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    &::-webkit-scrollbar { width: 0; }
 
     @media #{$m-from-laptop} {
       overflow-x: auto;
@@ -265,7 +268,7 @@
   &__choice-item {
     display: block;
     border-radius: 20px;
-    padding: 7px 14px 15px;
+    padding: 7px 14px 19px;
     font-size: 13px;
     color: $black;
     margin-right: 10px;
