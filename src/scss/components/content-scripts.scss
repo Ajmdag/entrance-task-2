@@ -51,8 +51,8 @@
     display: flex;
     transition: .35s all;
     overflow: auto;
-
     -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
     &::-webkit-scrollbar { width: 0; }
 
     @media #{$m-from-laptop} {
