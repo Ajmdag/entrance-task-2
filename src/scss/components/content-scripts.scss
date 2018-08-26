@@ -63,16 +63,16 @@
   &__panel-list {
     @media #{$m-from-laptop} {
       width: 646px;
-
-      &:not(:first-child) {
-        // display: none;
-      }
     }
   }
 
   .panel {
     &__list {
       margin-left: -6px;
+    }
+
+    &__item {
+      height: 100px;
     }
   }
 
@@ -84,7 +84,6 @@
 
       &__item {
         margin-bottom: 15px;
-        height: 100px;
         flex-shrink: 0;
 
         &:nth-child(3n) {
