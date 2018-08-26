@@ -5,9 +5,21 @@
   &__wrapper {
     transition: .5s all;
     filter: blur(0px);
+    position: relative;
 
     &.blur {
       filter: blur(5px);
+
+      &:after {
+        position: fixed;
+        display: block;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba($black, .15);
+      }
     }
   }
 

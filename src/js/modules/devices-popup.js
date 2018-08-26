@@ -18,7 +18,7 @@ devices.forEach(item => {
   
       // Создаю элементы попапа
       const popupContent = document.createElement('div');
-      popupContent.classList.add('popup__content');
+      popupContent.classList.add('popup__content-container');
       
       const popupHeader = document.createElement('div');
       popupHeader.classList.add('popup__header');
@@ -60,8 +60,10 @@ devices.forEach(item => {
   
       setTimeout(() => {
         popup.classList.add('show');
-        popup.style.top = 0;
-        popup.style.left = 0;
+        if (document.body.offsetWidth < 1366) {
+          popup.style.top = 0;
+          popup.style.left = 0;
+        }
       }, 1);
       page.classList.add('blur');
       
@@ -70,6 +72,7 @@ devices.forEach(item => {
           const popupFloorContent = document.createElement('div');
           popupFloorContent.innerHTML = '+23';
           popupFloorContent.classList.add('popup__content--floor');
+          popupContent.classList.add('floor');
           popupContent.appendChild(popupFloorContent);
         break;
         case 'temp':
@@ -81,7 +84,7 @@ devices.forEach(item => {
 
           const popupTempChoice = document.createElement('div');
           popupTempChoice.classList.add('popup__choice');
-          const popupTempChoiceItemsData = ['Вручную', 'Холодно', 'Тепло'];
+          const popupTempChoiceItemsData = ['Вручную', 'Холодно', 'Тепло', 'Жарко'];
           let popupTempChoiceItems = [];
           for (let i = 0; i < popupTempChoiceItemsData.length; i++) {
             const popupChoiceItem = document.createElement('span');
@@ -107,22 +110,42 @@ devices.forEach(item => {
             const sliderCoords = getCoords(popupTempContent);
             const leverCoords = getCoords(popupTempLever);
             const shiftY = event.pageY - leverCoords.top;
+            const shiftX = event.pageX - leverCoords.left;
 
-            document.onmousemove = event => {
-              let newOffsetTop = event.pageY - shiftY - sliderCoords.top;
+            if (document.body.offsetWidth > 1366) {
+              document.onmousemove = event => {
+                let newOffsetLeft = event.pageX - shiftX - sliderCoords.left;
 
-              if (newOffsetTop < 0) {
-                newOffsetTop = 0;
-              }
+                if (newOffsetLeft < 0) {
+                  newOffsetLeft = 0;
+                }
 
-              const bottomEdge = popupTempContent.offsetHeight - popupTempLever.offsetHeight;
-              
-              if (newOffsetTop > bottomEdge) {
-                newOffsetTop = bottomEdge;
-              }
+                const leftEdge = popupTempContent.offsetWidth - popupTempLever.offsetWidth;
 
-              popupTempLever.style.top = newOffsetTop + 'px';
-            };
+                if (newOffsetLeft > leftEdge) {
+                  newOffsetLeft = leftEdge;
+                }
+
+                popupTempLever.style.left = newOffsetLeft + 'px';
+              };
+            } else {
+              document.onmousemove = event => {
+                let newOffsetTop = event.pageY - shiftY - sliderCoords.top;
+  
+                if (newOffsetTop < 0) {
+                  newOffsetTop = 0;
+                }
+  
+                const bottomEdge = popupTempContent.offsetHeight - popupTempLever.offsetHeight;
+                
+                if (newOffsetTop > bottomEdge) {
+                  newOffsetTop = bottomEdge;
+                }
+  
+                popupTempLever.style.top = newOffsetTop + 'px';
+              };
+            }
+
 
             document.onmouseup = () => {
               document.onmousemove = document.onmouseup = null;
@@ -143,7 +166,7 @@ devices.forEach(item => {
 
           const popupLightChoice = document.createElement('div');
           popupLightChoice.classList.add('popup__choice');
-          const popupLightChoiceItemsData = ['Вручную', 'Дневной свет', 'Вечерний свет'];
+          const popupLightChoiceItemsData = ['Вручную', 'Дневной&nbsp;свет', 'Вечерний&nbsp;свет', 'Рассвет'];
           let popupLightChoiceItems = [];
           for (let i = 0; i < popupLightChoiceItemsData.length; i++) {
             const popupChoiceItem = document.createElement('span');
@@ -169,22 +192,43 @@ devices.forEach(item => {
             const sliderCoords = getCoords(popupLightContent);
             const leverCoords = getCoords(popupLightLever);
             const shiftY = event.pageY - leverCoords.top;
+            const shiftX = event.pageX - leverCoords.left;
 
-            document.onmousemove = event => {
-              let newOffsetTop = event.pageY - shiftY - sliderCoords.top;
+            if (document.body.offsetWidth > 1366) {
+              document.onmousemove = event => {
+                let newOffsetLeft = event.pageX - shiftX - sliderCoords.left;
 
-              if (newOffsetTop < 0) {
-                newOffsetTop = 0;
-              }
+                if (newOffsetLeft < 0) {
+                  newOffsetLeft = 0;
+                }
 
-              const bottomEdge = popupLightContent.offsetHeight - popupLightLever.offsetHeight;
-              
-              if (newOffsetTop > bottomEdge) {
-                newOffsetTop = bottomEdge;
-              }
+                const leftEdge = popupLightContent.offsetWidth - popupLightLever.offsetWidth;
 
-              popupLightLever.style.top = newOffsetTop + 'px';
-            };
+                if (newOffsetLeft > leftEdge) {
+                  newOffsetLeft = leftEdge;
+                }
+
+                popupLightLever.style.left = newOffsetLeft + 'px';
+              };
+            } else {
+              document.onmousemove = event => {
+                let newOffsetTop = event.pageY - shiftY - sliderCoords.top;
+                console.log('err');
+
+                if (newOffsetTop < 0) {
+                  newOffsetTop = 0;
+                }
+
+                const bottomEdge = popupLightContent.offsetHeight - popupLightLever.offsetHeight;
+
+                if (newOffsetTop > bottomEdge) {
+                  newOffsetTop = bottomEdge;
+                }
+
+                popupLightLever.style.top = newOffsetTop + 'px';
+              };
+            }
+
 
             document.onmouseup = () => {
               document.onmousemove = document.onmouseup = null;
