@@ -1,6 +1,7 @@
 .burger {
   z-index: 1;
   cursor: pointer;
+  height: 16px;
 
   @media #{$m-from-horizontal-phone} {
     display: none;
@@ -16,22 +17,6 @@
 
     &:not(:last-child) {
       margin-bottom: 3px;
-    }
-  }
-
-  &.close {
-    .burger__line {
-      &:nth-child(1) {
-        transform: translate(0, 5px) rotate(45deg);
-      }
-      
-      &:nth-child(2) {
-        display: none;
-      }
-      
-      &:nth-child(3) {
-        transform: translate(0, -1px) rotate(-45deg);
-      }
     }
   }
 }

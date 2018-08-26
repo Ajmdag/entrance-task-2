@@ -1,11 +1,14 @@
 .page {
-  display: flex;
-  flex-direction: column;
-  
   &__wrapper {
+    display: flex;
+    flex-direction: column;
     transition: .5s all;
     filter: blur(0px);
     position: relative;
+
+    @media #{$m-from-laptop} {
+      height: 100%;
+    }
 
     &.blur {
       filter: blur(5px);

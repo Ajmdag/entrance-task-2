@@ -10,13 +10,36 @@
     }
   }
 
-  &__nav.show {
-    z-index: 1;
-  }
-
   &__underline {
     height: 1px;
     width: 100%;
     color: $c-hr-line;
+  }
+
+  &__checkbox {
+    @include visually-hidden;
+
+    &:checked ~ .header__nav {
+      transform: translateY(0);
+      z-index: 1;
+    }
+
+    &:checked ~ .header__burger {
+      
+      .burger__line {
+
+        &:nth-child(1) {
+          transform: translate(0, 5px) rotate(45deg);
+        }
+        
+        &:nth-child(2) {
+          display: none;
+        }
+        
+        &:nth-child(3) {
+          transform: translate(0, -1px) rotate(-45deg);
+        }
+      }
+    }
   }
 }

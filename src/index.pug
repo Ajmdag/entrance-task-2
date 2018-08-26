@@ -16,6 +16,7 @@ html(lang="en")
           a.header__logo(href="#")
             img(src="./assets/YandexHome.svg", alt="")
   
+          input.header__checkbox#header-burger(type="checkbox")
           nav.header__nav.nav
             ul.nav__list
               li.nav__item
@@ -25,7 +26,7 @@ html(lang="en")
               li.nav__item
                 a.nav__link(href="#") Сценарии
   
-          .header__burger.burger
+          label(for="header-burger").header__burger.burger
               span.burger__line
               span.burger__line
               span.burger__line
