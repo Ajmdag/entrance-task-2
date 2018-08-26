@@ -44,7 +44,7 @@ html(lang="en")
                   .content-main__body
                     .content-main__block
                       .content-main__scroll-button
-                        img(src="./assets/Icons/ArrowDouble/M.svg")
+                        img(src="./assets/Icons/ArrowDouble/M.png")
                       img.content-main__image(src="./assets/bg@1x.png")
                       .content-main__text
                         p.title.content-main__hello Привет, Геннадий!
@@ -216,15 +216,19 @@ html(lang="en")
             .content__devices
               .content-devices
                 .content-devices__header
-                  p.title.content-devices__title Избранные&nbsp;устройства
-                  .content-devices__menu-list-item-all.picked
-                      span Все
-                      img(src="./assets/Icons/arrow-down.svg")
-                  .content-devices__menu-list
-                    label.content-devices__menu-list-item(for="filter-kitchen" data-filter="kitchen") Кухня
-                    label.content-devices__menu-list-item(for="filter-hall" data-filter="hall") Зал
-                    label.content-devices__menu-list-item(for="filter-lamp" data-filter="lamp") Лампочки
-                    label.content-devices__menu-list-item(for="filter-camera" data-filter="camera") Камеры
+                  .content-devices__text-container
+                    p.title.content-devices__title Избранные&nbsp;устройства
+                    .content-devices__menu-list-item-all.picked
+                        span Все
+                        img(src="./assets/Icons/arrow-down.svg")
+                    .content-devices__menu-list
+                      label.content-devices__menu-list-item(for="filter-kitchen" data-filter="kitchen") Кухня
+                      label.content-devices__menu-list-item(for="filter-hall" data-filter="hall") Зал
+                      label.content-devices__menu-list-item(for="filter-lamp" data-filter="lamp") Лампочки
+                      label.content-devices__menu-list-item(for="filter-camera" data-filter="camera") Камеры
+                  .content-devices__arrows
+                    img.content-devices__arrow.content-devices__arrow--left(src="./assets/Icons/arrow-left.svg")
+                    img.content-devices__arrow.content-devices__arrow--right(src="./assets/Icons/arrow-left.svg")
   
                 .content-devices__body
                   .panel.content-devices__panel-list

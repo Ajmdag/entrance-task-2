@@ -6,7 +6,17 @@
     margin-bottom: 17px;
 
     @media #{$m-from-laptop} {
-      justify-content: flex-start;
+      // justify-content: flex-start;
+    }
+  }
+
+  &__text-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    @media #{$m-from-laptop} {
+      width: auto;
     }
   }
 
@@ -45,6 +55,26 @@
           }
         }
       }
+    }
+  }
+
+  &__arrows {
+    display: none;
+
+    @media #{$m-from-laptop} {
+      display: flex;
+      align-items: center;
+
+      margin-right: 45px;
+    }
+  }
+
+  &__arrow {
+    cursor: pointer;
+
+    &:last-child {
+      transform: rotate(180deg);
+      margin-left: 20px;
     }
   }
 
@@ -122,7 +152,7 @@
   .panel__list {
     margin-left: -6px;
     @media #{$m-from-laptop} {
-      overflow: visible;
+      overflow: auto;
     }
   }
 
